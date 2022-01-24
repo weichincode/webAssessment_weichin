@@ -73,23 +73,23 @@ header {
 /* media selector end */
 
 /* container1 learn something new everyday start  */
-.container1 {
+.learn-something {
   display: flex;
   background-color: lightgray;
 }
 
-.container1 img {
+.learn-something img {
   width: 60%;
   padding: 32px 24px;
 }
 
-.container1 .item-text {
+.learn-something .item-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.container1 a {
+.learn-something a {
   background-color: #3a3535;
   color: #fff;
   text-decoration: none;
@@ -113,7 +113,7 @@ header {
 
 .container2 .block1 {
   display: flex;
-  width: 60%;
+  flex-basis: 60%;
   padding: 32px 24px;
   border: 1px solid lightgrey;
 }
@@ -121,6 +121,10 @@ header {
 .container2 .block1 img {
   width: 60%;
   padding: 32px 24px;
+}
+
+.container2 .item-text {
+  width: 60%;
 }
 
 /* container2 black2 right side */
