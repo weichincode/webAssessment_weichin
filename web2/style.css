@@ -1,0 +1,247 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* color: #01161e; */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 34pt;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+h3 {
+  font-size: 14pt;
+}
+
+/* header start */
+header {
+  display: flex;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lighter {
+  color: white;
+}
+
+.desktop {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop > a {
+  padding: 15px;
+  text-decoration: none;
+  color: darkgrey;
+}
+
+/* media selector start */
+@media only screen and (max-width: 720px) {
+  .desktop,
+  .logo {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .section1 {
+    flex-direction: column;
+  }
+
+  .section1 > img {
+    width: 100%;
+  }
+}
+/* media selector end */
+
+/* container1 learn something new everyday start  */
+.container1 {
+  display: flex;
+  background-color: lightgray;
+}
+
+.container1 img {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+.container1 .item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container1 a {
+  background-color: #3a3535;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  width: 50%;
+  display: block;
+  text-align: center;
+  padding: 8px;
+  margin-top: 10px;
+}
+/* container1 learn something new everyday end  */
+
+/* container2 main guy start */
+.container2 {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: #3a3535;
+  width: 100%;
+}
+
+.container2 .block1 {
+  display: flex;
+  width: 60%;
+  padding: 32px 24px;
+  border: 1px solid lightgrey;
+}
+
+.container2 .block1 img {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+/* container2 black2 right side */
+.container2 .block2 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 1px solid lightgrey;
+  padding-bottom: 32px;
+}
+
+/* set block2 item as flexbox = side by side */
+.block2 .item {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid lightgrey;
+}
+
+/* block2 padding top & bottom 8px */
+.block2 p {
+  padding: 8px 0px;
+}
+
+.block2 a {
+  text-decoration: none;
+}
+
+.item-lecture {
+  background: lightgray;
+}
+
+/* block2 image padding, width & height */
+.block2 .desktop {
+  width: 35%;
+  height: auto;
+  padding: 16px;
+}
+
+.block2 .mobile {
+  display: none;
+}
+
+/* container2 main guy end */
+
+/* container3 startLearning start */
+.container3 {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+}
+
+.container3 h2 {
+  text-align: center;
+  margin: 32px 0px;
+}
+
+.container3 .block1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 32px 72px;
+}
+.container3 .item-card {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 32px;
+  background-color: white;
+}
+
+.item-card img {
+  height: auto;
+}
+/* container3 startLearning end */
+
+/* container4 thesis start */
+.container4 {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  background-color: white;
+}
+
+.container4 h2 {
+  align-content: center;
+}
+
+.container4 .leftSide {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+  /* margin: 32px 24px; */
+  justify-content: flex-start;
+}
+
+.container4 video {
+  display: flex;
+}
+
+.leftSide .item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.container4 .rightSide {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: flex-end;
+}
+
+.container4 .rightSide .item {
+  display: flex;
+  flex-direction: row;
+}
+
+.container4 .rightSide img {
+  width: 35%;
+  height: auto;
+}
+
+.container4 .rightSide .item-text {
+  width: 65%;
+}
+/* container4 thesis end */
