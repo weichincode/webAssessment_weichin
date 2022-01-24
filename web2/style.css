@@ -177,12 +177,18 @@ header {
   margin: 32px 0px;
 }
 
-.container3 .block1 {
+.container3 .topBlock {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin: 32px 72px;
+  margin: 12px 72px;
 }
+
+.container3 .bottomBlock {
+  display: flex;
+  flex-direction: row;
+  margin: 12px 72px;
+}
+
 .container3 .item-card {
   display: flex;
   flex-direction: column;
@@ -196,52 +202,55 @@ header {
 /* container3 startLearning end */
 
 /* container4 thesis start */
-.container4 {
+.thesis {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-basis: 100%;
   background-color: white;
 }
 
-.container4 h2 {
-  align-content: center;
+.thesisTop {
+  text-align: center;
 }
 
-.container4 .leftSide {
+.thesisBottom {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+}
+
+.thesis .bottomLeft {
   display: flex;
   flex-direction: column;
   flex-basis: 60%;
-  /* margin: 32px 24px; */
-  justify-content: flex-start;
 }
 
-.container4 video {
-  display: flex;
+.thesis .bottomLeft video {
+  width: 60%;
 }
 
-.leftSide .item-text {
-  display: flex;
-  flex-direction: column;
+.thesisBottom .urbanText {
+  width: 60%;
 }
 
-.container4 .rightSide {
+.thesisBottom .bottomRight {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 40%;
-  justify-content: flex-end;
 }
 
-.container4 .rightSide .item {
+.bottomRightItem {
   display: flex;
   flex-direction: row;
 }
 
-.container4 .rightSide img {
+.bottomRightItem img {
+  display: flex;
+  flex-direction: row;
   width: 35%;
-  height: auto;
 }
 
-.container4 .rightSide .item-text {
+.bottomRightItem .item-text {
   width: 65%;
 }
 /* container4 thesis end */
