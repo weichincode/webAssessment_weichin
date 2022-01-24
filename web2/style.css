@@ -180,13 +180,13 @@ header {
 .container3 .topBlock {
   display: flex;
   flex-direction: row;
-  margin: 12px 72px;
+  margin: 32px 72px;
 }
 
 .container3 .bottomBlock {
   display: flex;
   flex-direction: row;
-  margin: 12px 72px;
+  margin: 0px 72px;
 }
 
 .container3 .item-card {
