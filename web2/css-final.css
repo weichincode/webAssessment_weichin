@@ -1,0 +1,310 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* color: #01161e; */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 34pt;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+h3 {
+  font-size: 14pt;
+}
+
+/* header start */
+header {
+  display: flex;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#darker {
+  color: black;
+  font-weight: bold;
+}
+
+.desktop {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop > a {
+  padding: 15px;
+  text-decoration: none;
+  color: darkgrey;
+}
+
+/* media selector start */
+@media only screen and (max-width: 720px) {
+  .desktop,
+  .logo {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .section1 {
+    flex-direction: column;
+  }
+
+  .section1 > img {
+    width: 100%;
+  }
+}
+/* media selector end */
+
+/* block1 learn-something start */
+.learn-something {
+  display: flex;
+  background-color: lightgray;
+}
+
+.learn-something img {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+.learn-something .item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.learn-something a {
+  background-color: #3a3535;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  width: 50%;
+  display: block;
+  text-align: center;
+  padding: 8px;
+  margin-top: 10px;
+}
+/* block1 learn-something end */
+
+/* block2  keep-practicing start*/
+.keep-practicing {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: #3a3535;
+  width: 100%;
+}
+
+.keep-practicing__left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+  padding: 32px 24px;
+  border: 1px solid lightgrey;
+}
+
+.keep-practicing__left img {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+.keep-practicing__left .item-text {
+  width: 60%;
+}
+
+.keep-practicing__right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 1px solid lightgrey;
+  padding-bottom: 32px;
+}
+
+.keep-practicing__right .item {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid lightgrey;
+}
+
+.keep-practicing__right p {
+  padding: 8px 0px;
+}
+
+.keep-practicing__right a {
+  text-decoration: none;
+}
+
+.item-lecture {
+  background: lightgray;
+}
+
+.keep-practicing__right .desktop {
+  width: 35%;
+  height: auto;
+  padding: 16px;
+}
+
+.keep-practicing__right .mobile {
+  display: none;
+}
+/* block2  keep-practicing end*/
+
+/* block3 start-learning start */
+.start-learning {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+}
+
+.start-learning__top {
+  text-align: center;
+  margin: 32px 0px;
+}
+
+.start-learning__wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.start-learning__wrap .item-card {
+  height: auto;
+}
+/* block3 start-learning start */
+
+/* block4 thesis start */
+.thesis {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  background-color: white;
+}
+
+.thesis__top {
+  text-align: center;
+}
+
+.thesis__bottom {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+}
+
+.thesis__bottom--left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+
+.thesis__bottom--left video {
+  width: 60%;
+}
+
+.thesis__bottom--left .item-text {
+  width: 60%;
+}
+
+.thesis__bottom--right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.thesis__bottom--right .item {
+  display: flex;
+  flex-direction: row;
+}
+
+.thesis__bottom--right img {
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+}
+
+.thesis__bottom--right .item-text {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+/* block4 thesis end */
+
+/* media query start */
+@media only screen and (max-width: 720px) {
+  .learn-something {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .keep-practicing {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .keep-practicing__left {
+    display: none;
+  }
+
+  .keep-practicing__right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+  .keep-practicing__right .item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .keep-practicing__right .mobile {
+    display: flex;
+  }
+  .start-learning {
+    display: flex;
+    flex-direction: column;
+  }
+  .start-learning__wrap img {
+    display: none;
+  }
+  .start-learning__wrap p {
+    display: none;
+  }
+
+  .start-learning__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .start-learning__wrap .item-text h3 {
+    display: block;
+  }
+  .thesis video {
+    width: 100%;
+  }
+
+  .thesis__bottom--left .item-text {
+    display: none;
+  }
+  .thesis__bottom--right {
+    display: none;
+  }
+}
