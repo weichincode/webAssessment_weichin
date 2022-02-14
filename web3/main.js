@@ -73,6 +73,7 @@ class Field {
       this.getInput();
 
       if (!this.isInBounds()) {
+        // isInBounds == false
         console.log("Out of bounds");
         playing = false;
         break;
