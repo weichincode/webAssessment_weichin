@@ -16,7 +16,7 @@ class Field {
   constructor(field = [[]]) {
     this.field = field;
 
-    // character starting position
+    // starting position
     this.start = {
       x: 0,
       y: 0,
@@ -27,7 +27,7 @@ class Field {
       y: 0,
     };
 
-    // initial user input
+    // initial user location
     this.locationX = 0;
     this.locationY = 0;
   } // end of constructor
@@ -39,15 +39,15 @@ class Field {
       y: 0,
     };
     if (pos.x === offLimit.x && pos.y === offLimit.y) {
-      pos.x = Math.floor(Math.random() * this.field[0].length);
-      pos.y = Math.floor(Math.random() * this.field.length);
+      pos.x = Math.floor(Math.random() * this.field[0].length); // position x random
+      pos.y = Math.floor(Math.random() * this.field.length); // position y random
     }
     return pos;
   } // end of method: randomPosition
 
   // method: setStart()
   setStart() {
-    this.start = this.randomPosition(0, 0);
+    this.start = { x: 0, y: 0 }; // set starting position at 0,0
     this.locationX = this.start.x;
     this.locationY = this.start.y;
     this.field[this.start.y][this.start.x] = pathCharacter;
@@ -103,16 +103,16 @@ class Field {
     const input = prompt("Which way? ").toUpperCase();
     switch (input) {
       case "U":
-        this.locationY -= 1;
+        this.locationY -= 1; // up = -y
         break;
       case "D":
-        this.locationY += 1;
+        this.locationY += 1; // down = +y
         break;
       case "L":
-        this.locationX -= 1;
+        this.locationX -= 1; // left = -x
         break;
       case "R":
-        this.locationX += 1;
+        this.locationX += 1; // right = +x
         break;
       default:
         console.log("Enter U, D, L or R.");
@@ -145,7 +145,7 @@ class Field {
 
   // method: addHoles
   addHoles() {
-    const numHoles = Math.floor(Math.random() * 3) + 1;
+    const numHoles = Math.floor(Math.random() * 3) + 1; // random number of holes
     for (let i = 1; i <= numHoles; i++) {
       let holePos = {
         x: 0,
@@ -158,6 +158,7 @@ class Field {
     }
   } // end of method: addHoles
 
+  // method: generateField
   static generateField(row, col, percentage) {
     const field = new Array(row).fill(0).map((element) => new Array(col));
     for (let y = 0; y < row; y++) {
@@ -167,7 +168,7 @@ class Field {
       }
     }
     return field;
-  }
+  } // end of method: generateField
 } // End of class: Field
 
 const myField = new Field(Field.generateField(row, col, 0.2));
