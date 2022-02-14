@@ -33,12 +33,12 @@ class Field {
   } // end of constructor
 
   // method: randomPosition()
-  randomPosition(offLimit = { x: 0, y: 0 }) {
+  randomPosition(limit = { x: 0, y: 0 }) {
     const pos = {
       x: 0,
       y: 0,
     };
-    if (pos.x === offLimit.x && pos.y === offLimit.y) {
+    if (pos.x === limit.x && pos.y === limit.y) {
       pos.x = Math.floor(Math.random() * this.field[0].length); // position x random
       pos.y = Math.floor(Math.random() * this.field.length); // position y random
     }
@@ -50,13 +50,13 @@ class Field {
     this.start = { x: 0, y: 0 }; // set starting position at 0,0
     this.locationX = this.start.x;
     this.locationY = this.start.y;
-    this.field[this.start.y][this.start.x] = pathCharacter;
+    this.field[this.start.y][this.start.x] = pathCharacter; // * at 0,0
   }
 
   // method setHat()
   setHat() {
     this.hatPos = this.randomPosition(this.start);
-    this.field[this.hatPos.y][this.hatPos.x] = hat;
+    this.field[this.hatPos.y][this.hatPos.x] = hat; // set hat position at random
   }
 
   // method: runGame
@@ -153,9 +153,9 @@ class Field {
         y: 0,
       };
       while (holePos.x === this.locationX && holePos.y === this.locationY) {
-        holePos = this.randomPosition(this.hatPos);
+        holePos = this.randomPosition(this.hatPos); // randomize hole position
       }
-      this.field[holePos.y][holePos.x] = hole;
+      this.field[holePos.y][holePos.x] = hole; // set hole at x,y
     }
   } // end of method: addHoles
 

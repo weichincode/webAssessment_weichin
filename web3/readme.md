@@ -1,3 +1,19 @@
+# Reflection
+
+What did you like about this project?
+
+- coding the control flow & logic
+
+What did you struggle with in this project?
+
+- working with 2d arrays
+
+What would make your experience with this assessment better?
+
+- more time would be good
+
+---
+
 # Docs:
 
 - [Javascript Assessment (3 hour 30 minutes)](https://docs.google.com/document/d/1qSL6Li5Jt8yPDzc31oCLomjokMOW5eE1/edit#)
