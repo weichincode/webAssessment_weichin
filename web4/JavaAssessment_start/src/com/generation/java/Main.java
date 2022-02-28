@@ -91,6 +91,8 @@ public class Main
 
     /*
     gradeStudent
+    HashMap: Key = courseId, Value = grade
+    scanner = Key input
 
      */
 
